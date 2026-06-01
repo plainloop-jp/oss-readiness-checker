@@ -8,6 +8,10 @@ people expect from an open-source repository.
 It is designed for developers who are publishing an open-source project for
 the first time and want a simple checklist.
 
+## Demo
+
+![OSS Readiness Checker example output](https://raw.githubusercontent.com/plainloop-jp/oss-readiness-checker/main/assets/demo.svg)
+
 ## What it checks
 
 The first version checks for:

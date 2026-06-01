@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="620" viewBox="0 0 1120 620" role="img" aria-labelledby="title description">
+  <title id="title">OSS Readiness Checker example output</title>
+  <desc id="description">A terminal window showing project checks, missing files, a README usage suggestion, and a score of 60 out of 100.</desc>
+
+  <rect width="1120" height="620" rx="18" fill="#0d1117"/>
+  <rect width="1120" height="54" rx="18" fill="#161b22"/>
+  <rect y="36" width="1120" height="18" fill="#161b22"/>
+
+  <circle cx="28" cy="27" r="7" fill="#ff5f56"/>
+  <circle cx="52" cy="27" r="7" fill="#ffbd2e"/>
+  <circle cx="76" cy="27" r="7" fill="#27c93f"/>
+  <text x="560" y="33" text-anchor="middle" fill="#8b949e" font-family="Consolas, 'Liberation Mono', monospace" font-size="15">oss-readiness-checker</text>
+
+  <g font-family="Consolas, 'Liberation Mono', monospace" font-size="17">
+    <text x="28" y="91" fill="#8b949e">$</text>
+    <text x="50" y="91" fill="#f0f6fc">npx oss-readiness-checker check .</text>
+
+    <text x="28" y="134" fill="#f0f6fc">OSS Readiness Checker</text>
+    <text x="28" y="162" fill="#8b949e">Project: /path/to/my-project</text>
+
+    <text x="28" y="210" fill="#3fb950">[PASS]</text>
+    <text x="102" y="210" fill="#f0f6fc">README: Project documentation found.</text>
+
+    <text x="28" y="240" fill="#3fb950">[PASS]</text>
+    <text x="102" y="240" fill="#f0f6fc">LICENSE: License file found.</text>
+
+    <text x="28" y="270" fill="#f85149">[MISS]</text>
+    <text x="102" y="270" fill="#f0f6fc">CONTRIBUTING: Add CONTRIBUTING.md to explain how people can help.</text>
+    <text x="102" y="296" fill="#8b949e">Learn more: docs.github.com/.../setting-guidelines-for-repository-contributors</text>
+
+    <text x="28" y="326" fill="#f85149">[MISS]</text>
+    <text x="102" y="326" fill="#f0f6fc">SECURITY: Add SECURITY.md to explain how to report vulnerabilities.</text>
+    <text x="102" y="352" fill="#8b949e">Learn more: docs.github.com/.../adding-a-security-policy-to-your-repository</text>
+
+    <text x="28" y="382" fill="#3fb950">[PASS]</text>
+    <text x="102" y="382" fill="#f0f6fc">PROJECT MANIFEST: Project manifest found.</text>
+
+    <text x="28" y="430" fill="#f0f6fc">Suggestions:</text>
+    <text x="28" y="460" fill="#d29922">[WARN]</text>
+    <text x="102" y="460" fill="#f0f6fc">README USAGE: Add a Usage, Getting Started, or Quick Start section.</text>
+
+    <text x="28" y="514" fill="#f0f6fc">Score:</text>
+    <text x="98" y="514" fill="#d29922">60 / 100</text>
+  </g>
+
+  <rect x="24" y="550" width="1072" height="46" rx="8" fill="#161b22"/>
+  <text x="46" y="580" fill="#8b949e" font-family="Consolas, 'Liberation Mono', monospace" font-size="16">Find the missing pieces before sharing your project.</text>
+</svg>
