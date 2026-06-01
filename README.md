@@ -27,22 +27,22 @@ Each item is worth 20 points.
 
 ## Usage
 
-Run the checker against the current folder:
+Run the checker against the current folder without installing it:
 
 ```sh
-node ./src/cli.js check .
+npx oss-readiness-checker check .
 ```
 
 Check another project:
 
 ```sh
-node ./src/cli.js check ../my-project
+npx oss-readiness-checker check ../my-project
 ```
 
 Output machine-readable JSON for CI:
 
 ```sh
-node ./src/cli.js check . --json
+npx oss-readiness-checker check . --json
 ```
 
 Example:
@@ -69,6 +69,12 @@ When a missing file has a relevant guide, the checker also prints a
 `Learn more` link with practical next steps.
 
 ## Development
+
+Run the local source code:
+
+```sh
+node ./src/cli.js check .
+```
 
 Run the tests:
 
