@@ -1,0 +1,17 @@
+name: OSS Readiness Checker
+description: Check whether a repository has the basic files expected from an open-source project.
+author: plainloop-jp
+
+inputs:
+  path:
+    description: Directory to check, relative to the repository root.
+    required: false
+    default: "."
+
+runs:
+  using: node20
+  main: src/action.js
+
+branding:
+  icon: check-circle
+  color: green

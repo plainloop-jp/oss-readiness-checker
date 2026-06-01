@@ -101,6 +101,37 @@ something is missing. This makes it useful in automated workflows.
 When a missing file has a relevant guide, the checker also prints a
 `Learn more` link with practical next steps.
 
+## GitHub Action
+
+Run the checker automatically after each push and pull request by adding
+`.github/workflows/oss-readiness.yml` to your repository:
+
+```yaml
+name: OSS Readiness
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+      - uses: plainloop-jp/oss-readiness-checker@v0.3.0
+```
+
+By default, the action checks the repository root. Use the optional `path`
+input when the project is inside a subdirectory.
+
 ## Development
 
 Run the local source code:
@@ -125,7 +156,6 @@ npm run check
 
 - Add more checks for README content quality
 - Suggest fixes for missing files
-- Publish a GitHub Action
 - Add configurable rules
 
 ## Contributing

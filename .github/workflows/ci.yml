@@ -33,5 +33,5 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Check this repository
-        run: npm run check
+      - name: Check this repository with the local action
+        uses: ./
