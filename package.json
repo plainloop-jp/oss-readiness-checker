@@ -1,10 +1,10 @@
 {
   "name": "oss-readiness-checker",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A small CLI that checks whether a project is ready to be shared as open source.",
   "type": "module",
   "bin": {
-    "oss-ready": "./src/cli.js"
+    "oss-ready": "src/cli.js"
   },
   "scripts": {
     "check": "node ./src/cli.js check .",

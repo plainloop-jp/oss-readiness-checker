@@ -1,8 +1,13 @@
 #!/usr/bin/env node
 
+import { readFile } from "node:fs/promises";
+
 import { checkProject } from "./checker.js";
 
-const VERSION = "0.1.0";
+const packageJson = JSON.parse(
+  await readFile(new URL("../package.json", import.meta.url), "utf8")
+);
+const VERSION = packageJson.version;
 
 function printHelp() {
   console.log(`OSS Readiness Checker
