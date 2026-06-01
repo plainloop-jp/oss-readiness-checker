@@ -4,10 +4,9 @@
 
 Please do not open a public GitHub issue for a security vulnerability.
 
-Until a private reporting channel is configured, contact the maintainer
-through the GitHub profile at:
+Send security reports to:
 
-https://github.com/plainloop-jp
+plainloop.oss@gmail.com
 
 Include a clear description, steps to reproduce the issue, and any possible
 impact. Please allow time for the report to be reviewed before disclosing it
