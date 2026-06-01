@@ -10,6 +10,25 @@ people expect from an open-source repository.
 It is designed for developers who are publishing an open-source project for
 the first time and want a simple checklist.
 
+## 日本語で試す
+
+OSS として公開したいフォルダに、基本的なファイルがそろっているかを
+100 点満点で確認するツールです。インストールせずに試せます。
+
+Windows の PowerShell:
+
+```powershell
+npx.cmd oss-readiness-checker check .
+```
+
+macOS または Linux:
+
+```sh
+npx oss-readiness-checker check .
+```
+
+Node.js 20 以上が必要です。詳しい説明は、このあとの英語版をご覧ください。
+
 ## Demo
 
 ![OSS Readiness Checker example output](https://raw.githubusercontent.com/plainloop-jp/oss-readiness-checker/main/assets/demo.svg)
