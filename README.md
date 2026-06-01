@@ -1,6 +1,8 @@
 # OSS Readiness Checker
 
 [![CI](https://github.com/plainloop-jp/oss-readiness-checker/actions/workflows/ci.yml/badge.svg)](https://github.com/plainloop-jp/oss-readiness-checker/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/oss-readiness-checker.svg)](https://www.npmjs.com/package/oss-readiness-checker)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 A small command-line tool that checks whether a project has the basic files
 people expect from an open-source repository.
