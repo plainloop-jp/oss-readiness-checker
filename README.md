@@ -1,5 +1,7 @@
 # OSS Readiness Checker
 
+[![CI](https://github.com/plainloop-jp/oss-readiness-checker/actions/workflows/ci.yml/badge.svg)](https://github.com/plainloop-jp/oss-readiness-checker/actions/workflows/ci.yml)
+
 A small command-line tool that checks whether a project has the basic files
 people expect from an open-source repository.
 
