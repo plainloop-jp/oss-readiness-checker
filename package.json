@@ -1,6 +1,6 @@
 {
   "name": "oss-readiness-checker",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A small CLI that checks whether a project is ready to be shared as open source.",
   "type": "module",
   "bin": {

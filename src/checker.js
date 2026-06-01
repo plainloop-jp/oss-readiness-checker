@@ -1,4 +1,4 @@
-import { readdir, stat } from "node:fs/promises";
+import { readFile, readdir, stat } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const POINTS_PER_CHECK = 20;
@@ -71,18 +71,45 @@ async function listFiles(root) {
   const files = new Set();
 
   for (const entry of rootEntries) {
-    files.add(entry.name.toLowerCase());
+    if (entry.isFile()) {
+      files.add(entry.name.toLowerCase());
+    }
   }
 
   const githubDirectory = resolve(root, ".github");
   if (await isDirectory(githubDirectory)) {
     const githubEntries = await readdir(githubDirectory, { withFileTypes: true });
     for (const entry of githubEntries) {
-      files.add(`.github/${entry.name}`.toLowerCase());
+      if (entry.isFile()) {
+        files.add(`.github/${entry.name}`.toLowerCase());
+      }
     }
   }
 
   return files;
+}
+
+async function checkReadmeGuidance(projectPath, results) {
+  const readme = results.find((result) => result.id === "readme");
+  if (!readme?.matchedFile) {
+    return [];
+  }
+
+  const content = await readFile(resolve(projectPath, readme.matchedFile), "utf8");
+  if (/^#{1,6}\s+(usage|getting started|quick start)\b/im.test(content)) {
+    return [];
+  }
+
+  return [
+    {
+      id: "readme-usage",
+      label: "README USAGE",
+      message:
+        "Add a Usage, Getting Started, or Quick Start section so people know how to begin.",
+      learnMore:
+        "https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes"
+    }
+  ];
 }
 
 export async function checkProject(path = ".") {
@@ -108,12 +135,14 @@ export async function checkProject(path = ".") {
       points: matchedFile ? POINTS_PER_CHECK : 0
     };
   });
+  const advisories = await checkReadmeGuidance(projectPath, results);
 
   return {
     projectPath,
     score: results.reduce((total, result) => total + result.points, 0),
     maxScore: CHECKS.length * POINTS_PER_CHECK,
     passed: results.every((result) => result.passed),
-    results
+    results,
+    advisories
   };
 }

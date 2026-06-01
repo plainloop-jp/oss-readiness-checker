@@ -21,6 +21,10 @@ The first version checks for:
 
 Each item is worth 20 points.
 
+The checker also suggests adding a `Usage`, `Getting Started`, or `Quick Start`
+section when a README does not explain how to begin. Suggestions do not affect
+the score or exit code.
+
 ## Requirements
 
 - Node.js 20 or later
@@ -59,6 +63,10 @@ Project: /path/to/my-project
        Learn more: https://docs.github.com/code-security/getting-started/adding-a-security-policy-to-your-repository
 [PASS] PROJECT MANIFEST: Project manifest found.
 
+Suggestions:
+[WARN] README USAGE: Add a Usage, Getting Started, or Quick Start section so people know how to begin.
+       Learn more: https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes
+
 Score: 60 / 100
 ```
 
@@ -90,7 +98,7 @@ npm run check
 
 ## Roadmap
 
-- Add checks for README content quality
+- Add more checks for README content quality
 - Suggest fixes for missing files
 - Publish a GitHub Action
 - Add configurable rules

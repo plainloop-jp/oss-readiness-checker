@@ -59,6 +59,17 @@ function printReport(report) {
     }
   }
 
+  if (report.advisories.length > 0) {
+    console.log("");
+    console.log("Suggestions:");
+    for (const advisory of report.advisories) {
+      console.log(`[WARN] ${advisory.label}: ${advisory.message}`);
+      if (advisory.learnMore) {
+        console.log(`       Learn more: ${advisory.learnMore}`);
+      }
+    }
+  }
+
   console.log("");
   console.log(`Score: ${report.score} / ${report.maxScore}`);
 }
