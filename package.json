@@ -1,0 +1,33 @@
+{
+  "name": "oss-readiness-checker",
+  "version": "0.1.0",
+  "description": "A small CLI that checks whether a project is ready to be shared as open source.",
+  "type": "module",
+  "bin": {
+    "oss-ready": "./src/cli.js"
+  },
+  "scripts": {
+    "check": "node ./src/cli.js check .",
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plainloop-jp/oss-readiness-checker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/plainloop-jp/oss-readiness-checker/issues"
+  },
+  "homepage": "https://github.com/plainloop-jp/oss-readiness-checker#readme",
+  "keywords": [
+    "open-source",
+    "oss",
+    "cli",
+    "readiness",
+    "checklist"
+  ],
+  "author": "plainloop-jp",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  }
+}
