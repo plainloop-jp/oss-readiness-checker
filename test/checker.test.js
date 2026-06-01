@@ -49,6 +49,14 @@ test("reports missing files and a lower score", async (context) => {
     report.results.filter((result) => !result.passed).map((result) => result.id),
     ["license", "contributing", "security"]
   );
+  assert.equal(
+    report.results.find((result) => result.id === "license").learnMore,
+    "https://choosealicense.com/"
+  );
+  assert.match(
+    report.results.find((result) => result.id === "security").learnMore,
+    /adding-a-security-policy/
+  );
 });
 
 test("finds supported files inside the .github directory", async (context) => {

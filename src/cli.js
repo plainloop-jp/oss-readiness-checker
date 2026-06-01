@@ -49,6 +49,9 @@ function printReport(report) {
   for (const result of report.results) {
     const status = result.passed ? "PASS" : "MISS";
     console.log(`[${status}] ${result.label}: ${result.message}`);
+    if (result.learnMore) {
+      console.log(`       Learn more: ${result.learnMore}`);
+    }
   }
 
   console.log("");

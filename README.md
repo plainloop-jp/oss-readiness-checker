@@ -52,7 +52,9 @@ Project: /path/to/my-project
 [PASS] README: Project documentation found.
 [PASS] LICENSE: License file found.
 [MISS] CONTRIBUTING: Add CONTRIBUTING.md to explain how people can help.
+       Learn more: https://docs.github.com/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors
 [MISS] SECURITY: Add SECURITY.md to explain how to report vulnerabilities.
+       Learn more: https://docs.github.com/code-security/getting-started/adding-a-security-policy-to-your-repository
 [PASS] PROJECT MANIFEST: Project manifest found.
 
 Score: 60 / 100
@@ -60,6 +62,9 @@ Score: 60 / 100
 
 The command exits with status code `0` when all checks pass and `1` when
 something is missing. This makes it useful in automated workflows.
+
+When a missing file has a relevant guide, the checker also prints a
+`Learn more` link with practical next steps.
 
 ## Development
 
