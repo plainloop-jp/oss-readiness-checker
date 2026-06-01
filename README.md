@@ -106,6 +106,8 @@ When a missing file has a relevant guide, the checker also prints a
 Run the checker automatically after each push and pull request by adding
 `.github/workflows/oss-readiness.yml` to your repository:
 
+[View the action on GitHub Marketplace.](https://github.com/marketplace/actions/oss-readiness-checker)
+
 ```yaml
 name: OSS Readiness
 
@@ -126,7 +128,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
-      - uses: plainloop-jp/oss-readiness-checker@v0.3.0
+      - uses: plainloop-jp/oss-readiness-checker-action@v0.3.0
 ```
 
 By default, the action checks the repository root. Use the optional `path`
