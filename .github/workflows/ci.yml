@@ -33,5 +33,5 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Check this repository with the local action
-        uses: ./
+      - name: Check this repository with the Marketplace action
+        uses: plainloop-jp/oss-readiness-checker-action@v0.3.0
