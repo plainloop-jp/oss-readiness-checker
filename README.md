@@ -128,7 +128,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
-      - uses: plainloop-jp/oss-readiness-checker-action@v0.3.0
+      - uses: plainloop-jp/oss-readiness-checker-action@v0.3.1
 ```
 
 By default, the action checks the repository root. Use the optional `path`

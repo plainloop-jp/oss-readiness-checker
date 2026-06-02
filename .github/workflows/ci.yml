@@ -34,4 +34,4 @@ jobs:
         run: npm test
 
       - name: Check this repository with the Marketplace action
-        uses: plainloop-jp/oss-readiness-checker-action@v0.3.0
+        uses: plainloop-jp/oss-readiness-checker-action@v0.3.1
