@@ -134,6 +134,10 @@ jobs:
 By default, the action checks the repository root. Use the optional `path`
 input when the project is inside a subdirectory.
 
+This repository also uses the Marketplace action in its own CI. See the
+[workflow file](https://github.com/plainloop-jp/oss-readiness-checker/blob/main/.github/workflows/ci.yml)
+and [workflow runs](https://github.com/plainloop-jp/oss-readiness-checker/actions/workflows/ci.yml).
+
 ## Development
 
 Run the local source code:
